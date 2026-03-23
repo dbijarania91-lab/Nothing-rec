@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">NothingRecorder</string>
-    <string name="start_recording">Start Recording</string>
-    <string name="stop">Stop Recording</string>
-    <string name="ready">Ready</string>
-    <string name="recording">● Recording</string>
-</resources>
