@@ -21,8 +21,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
+      - name: Fix gradlew line endings and make executable
+        run: |
+          sudo apt-get update
+          sudo apt-get install dos2unix
+          dos2unix ./gradlew
+          chmod +x ./gradlew
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug --stacktrace
