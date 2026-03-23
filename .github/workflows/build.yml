@@ -21,11 +21,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Fix gradlew line endings and make executable
+      - name: Generate clean Gradle Wrapper
         run: |
-          sudo apt-get update
-          sudo apt-get install dos2unix
-          dos2unix ./gradlew
+          gradle wrapper
           chmod +x ./gradlew
 
       - name: Build Debug APK
